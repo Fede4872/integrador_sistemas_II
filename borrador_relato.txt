@@ -1,0 +1,49 @@
+===============RELATO===============  
+  Frente al problema de la cuarentena causada por el covid-19
+la tienda de ropa "La Moda" tiene que informatizarse para
+sufrir la menor cantidad de pérdidas posible.
+
+  La tienda no es muy grande, pero localmente le fue bastante
+bien. Incluso pudo conseguir varios clientes frecuentes de quienes
+llevó constancia hasta el comienzo de la pandemia, y le gustaría
+seguir haciéndolo. Los clientes frecuentes gozan de descuentos
+establecidos por gerentes (por lo tanto, también debe poder
+reconocerse qué empleados poseen el cargo de gerente).
+  
+  El cliente puede navegar por la tienda. La tienda online
+cuenta con 3 secciones principales: Preguntas Frecuentes,
+Un Catálogo con opción de búsqueda por filtros 
+(marca/precio/tipo de prenda), y Página Inicial que muestra 
+una presentación de la tienda.
+
+  La tienda ya contaba con un sistema para llevar constancia
+del stock previo a la pandemia.
+
+  El cliente al elegir un producto puede ver el precio,
+puede ver disponibilidad, y los distintos formatos (de color, etc)
+en los que está disponible la prenda. También cuenta con
+la opción de consultar a la tienda. Las consultas deberían
+ser respondidas por vendedores, ya que esa es su función
+en la tienda física.
+
+  Si un cliente decide añadir un producto al carro de compras, debe logearse primero
+en caso de no estar ya logeado. Si un producto en el momento no está 
+disponible, se dá la opción de hacer una reserva (el valor de un producto 
+reservado puede variar respecto al producto si éste estuviera disponible). Si
+un producto no disponible, es reservado por varios usuarios, si hay un cliente
+frecuente entre quienes reservaron se dá prioridad a éste, 
+si no se prosigue con el orden en el que se hicieron las reservas.
+
+  Al proceder con la compra de los productos que se encuentren en el carrito
+de compras, los métodos de pago aceptados en la tienda online son crédito y débito
+para reservas y compra de productos disponibles, y efectivo o billeteras
+electrónicas para compra de productos disponibles únicamente. Al momento
+del pago se debe generar la factura electrónica.
+
+  Por la situación de pandemia las devoluciones están suspendidas
+por riesgo a contagio.
+
+  Finalmente, el envío de productos se hace por correo. 
+La tienda se hace cargo del costo de envío de las compras
+de clientes frecuentes. Para el resto de los clientes, el costo 
+de envío se añade al costo final que aparece en la factura electrónica.

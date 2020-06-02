@@ -1,0 +1,45 @@
+===============LÍMITES===============
+Límites: {
+	_Sección de ventas de la tienda.
+}
+Fuera de límites: {
+	_Registro persistente del estado del almacén de la tienda
+	(stock), y contactos de proveedores.
+}
+===============OBJETIVOS===============
+Objetivos: {
+	1_En cuanto a disposición de productos:
+	 Crear un catálogo online para mantener una clientela
+	de al menos un 60% de lo que era previo a la pandemia.
+	2_En cuanto a la velocidad de desarrollo y sustentabilidad:
+	 Aprovechar la tercerización de servicios cuando sea conveniente.
+	Para poner la tienda en marcha lo antes posible y minimizar
+	pérdidas.
+	3_En cuanto a la experiencia del cliente:
+	 Desarrollar una aplicación interactiva que sea cómoda
+	de usar para el cliente. Con la finalidad de
+	mantener o aumentar en un pequeño porcentaje el número
+	de visitas a la tienda (visitas ahora virtuales).
+	4_En cuanto a la productiviad de los empleados:
+	 Desarrollar una aplicación fácil de usar, que permita
+	al empleado seguir llevando a cabo sus funciones en la tienda.
+}
+===============ALCANCE===============
+Alcance: {
+	_Función por compra inmediata o por reserva de un producto.
+	_Implementación de UI y UX (User Interface y User 
+	Experience) cómodas para todo tipo de usuario.
+	_Uso por los empleados para llevar a cabo las actividades
+	que les corresponden dentro de la sección de Ventas.
+	_Disposición de productos en un catálogo.
+	_Constancia de empleados, clientes y datos relevantes 
+	a la actividad.
+}
+
+Fuera del alcance: {
+	_Regulación de principio a fin la transacción de dinero
+	(se terceriza).
+	_El envío de productos (se terceriza).
+	_Uso como único medio para llevar constancia de stock
+	y contacto de proveedores.
+}
