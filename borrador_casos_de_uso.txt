@@ -1,0 +1,31 @@
+Actores: {
+	_Cliente.
+		-> Cliente Frecuente.
+	_Empleado.
+		-> Gerente.
+		-> Vendedor.
+	_Correo.
+}
+
+Casos de Uso: {
+	_Regular descuentos.
+	_Navegar por la tienda.
+		-> Catálogo.
+		-> Preguntas Frecuentes.
+		-> Página Inicial.
+	_Seleccionar producto.
+	_--extends--> consultar producto.
+	_Añadir al carro de compras 
+	  // (para comprar / como reserva).
+	_-extend->Comprar.
+	_-include->Elegir método de pago.
+	  // (crédito / débito /
+	  // efectivo / billetera online).
+	_Enviar producto.
+}
+
+[
+Opción para Comprar y Elegir método de pago: 
+_Comprar -include-> reserva --extend--> (métodos de pago disponibles).
+	 -include-> compra directa --extend--> (métodos de pago disponibles).
+]

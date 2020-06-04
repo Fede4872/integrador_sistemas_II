@@ -1,0 +1,35 @@
+Historias de Usuario:
+
+1)
+	 Como Cliente quiero poder usar cuentas de mis redes sociales
+	para poder logear sin crear una nueva cuenta.
+2)
+	 Como Vendedor quiero una sección de consultas en cada producto
+	para poder aclarar dudas con respecto al producto a los clientes interesados.
+3)
+	 Como Cliente quiero ver el talle de la ropa traducido a centímetros
+	para tener una referencia real.
+4)
+	 Como Vendedor quiero poder editar la disponibilidad de un producto
+	para mantener la página actualizada.
+5)
+	 Como Gerente quiero una opción en cada producto para poder establecer
+	un descuento o no.
+6)
+	 Como Cliente quiero saber si clasifico como cliente regular para 
+	saber si cuento con descuentos y envío cubierto.
+7)
+	 Como Cliente quiero poder guardar información de mis tarjetas para
+	no tener que ingresarla cada vez que haga una compra.
+8)
+	 Como Gerente quiero visualizar la actividad de cada Vendedor para
+	tener un registro del desempeño de los empleados.
+9)
+	 Como Cliente quiero una sección de Preguntas Frecuentes para
+	poder aclarar algunas dudas sin tener que esperar por una respuesta.
+10)
+	 Como Cliente quiero poder filtrar la búsqueda de productos para
+	encontrar productos mi interés rápidamente.
+11)
+	 Como Cliente quiero ver un resumen de mi compra antes de proceder
+	a elegir método de pago y confirmar la compra.
