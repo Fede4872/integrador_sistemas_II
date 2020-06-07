@@ -1,0 +1,98 @@
+Cliente: {
+	cliente_id int unsigned auto increment not null, <- PK
+	nombre varchar(30),
+	apellido varchar(30),
+	frecuente_estado boolean,
+	email varchar(80),
+	telefono varchar(20),
+}
+
+Empleado: {
+	empleado_id int unsigned auto increment not null, <- PK
+	sueldo numeric(10,2),
+	nombre varchar(30),
+	apellido varchar(30),
+	telefono varchar(20),
+	email varchar(80),
+} 
+	==Herencia total disjunta==
+	Gerente: {
+		empleado_id int unsigned not null, <- PK/FK
+		gestionar_descuentos()
+	}
+	Vendedor: {
+		empleado_id(),
+		crud_producto(),
+		responder_comentario(),
+	}
+
+Marca: {
+	marca_id smallint unsigned auto increment not null, <- PK
+	marca_nombre varchar(30)
+}
+
+Producto: {
+	producto_id int unsigned auto increment not null, <- PK
+	marca_id smallint unsigned not null, <- FK, index
+	disponibilidad boolean
+	precio numeric(10,2),
+	formatos varchar(50),
+	descuento_aplicado smallint,
+	foreign key fk_marca (marca_id) references Marca(marca_id),
+	index idx_marca using BTREE (marca_id),
+}
+
+Carro_de_Compras: {
+	carro_duenio int unsigned not null, <- PK/FK
+	frecuente_estado boolean,
+	reserva_estado boolean,
+	foreign key fk_cliente (duenio) references Cliente(cliente_id),
+	add_producto(),
+	remove_producto(),
+	calcular_total(),
+}
+
+Producto 0..* <--> 0..* Carro_de_Compras
+En_Carro_de_Compra: {
+	carro_duenio int unsigned not null, <- FK, index
+	producto_id int unsigned not null, <- FK, index
+	cantidad smallint unsigned,
+	foreign key fk_producto (producto_id) references Producto(producto_id),
+	foreign key fk_carro (carro_duenio) references Carro_de_Compras(carro_duenio),
+	index idx_en_carro using BTREE (producto_id, carro_duenio) 
+}
+
+Cliente 1..1 <--> 0..* Orden_de_Compra
+Orden_de_Compra: {
+	orden_nro serial, <- PK,
+	cliente_id int unsigned not null, <- FK, Unique Key
+	costo_total numeric(11,2),
+	reserva_estado boolean,
+	frecuente_estado boolean,
+	hora_orden timestamp not null default current_time <- Index
+	foreign key fk_cliente (cliente_id) references Cliente(cliente_id),
+	unique key idx_cliente using BTREE (cliente_id),
+	index key idx_timestamp using BTREE (hora_orden),
+	static priorizar_ordenes()
+}
+Factura_Electronica: {
+	factura_nro serial, <- PK
+	corresponde_a_orden bigint unsigned not null, <- FK
+	tipo_factura varchar(3),
+	foreign key fk_orden_de_compra (corresponde_a_orden) 
+		references Orden_de_Compra(orden_nro)
+}
+Cliente 1..1 <--> 0..* Comentario
+Vendedor 0..1 <--> 1..* Comentario
+Producto 1..1 <--> 0..* Comentario
+Comentario: {
+	comentario_id serial, <- PK
+	producto_id int unsigned not null, <- FK
+	cliente_id int unsigned not null, <- FK
+	empleado_id int unsigned, <- FK
+	comentario_contenido varchar(280) not null,
+	respuesta_contenido varchar(280),
+	foreign key fk_cliente (cliente_id) references Cliente(cliente_id),
+	foreign key fk_producto (producto_id) references Producto(producto_id),
+	foreign key fk_vendedor (empleado_id) references Empleado(empleado_id),
+}
